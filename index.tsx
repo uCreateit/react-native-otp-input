@@ -184,7 +184,7 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
     renderOneInputField = (_: TextInput, index: number) => {
         const { codeInputFieldStyle, codeInputHighlightStyle, secureTextEntry, editable, keyboardType, selectionColor, keyboardAppearance } = this.props
         const { defaultTextFieldStyle } = styles
-        const { selectedIndex, digits } = this.state
+        const { digits } = this.state
         const { clearInputs, placeholderCharacter, placeholderTextColor } = this.props
         const { color: defaultPlaceholderTextColor } = { ...defaultTextFieldStyle, ...codeInputFieldStyle }
         return (
