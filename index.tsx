@@ -192,7 +192,7 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
                 <TextInput
                     testID="textInput"
                     underlineColorAndroid='rgba(0,0,0,0)'
-                    style={selectedIndex === index ? [defaultTextFieldStyle, codeInputFieldStyle, codeInputHighlightStyle] : [defaultTextFieldStyle, codeInputFieldStyle]}
+                    style={digits[index] ? [codeInputHighlightStyle] : [codeInputFieldStyle]} 
                     ref={ref => { this.fields[index] = ref }}
                     onChangeText={text => {
                         this.handleChangeText(index, text)
